@@ -5,7 +5,20 @@ import apiKey
 
 
 API_KEY = apiKey.KEY
-movies_id = [] #crie uma lista de id de filmes
+movies_id = []
+qtd_filmes = 0
+
+while qtd_filmes <= 2:
+    nome_filme = input("Digite o nome do filme!")
+    movieByName = requests.get(f'https://api.themoviedb.org/3/search/movie?api_key={API_KEY}&query={nome_filme.replace(' ', '-')}')
+    dados = movieByName.json()
+    try:
+        movies_id.append(dados['results'][0]['id'])
+    except IndexError:
+        print("Nome não encontrado, escolha outro título!")
+    finally:
+        qtd_filmes+=1
+    
 
 for id in movies_id:
     movie = requests.get(f'https://api.themoviedb.org/3/movie/{id}?api_key={API_KEY}').json()

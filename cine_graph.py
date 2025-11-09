@@ -1,0 +1,93 @@
+import streamlit as st
+import requests
+import json
+import os
+import apiKey
+
+API_KEY = apiKey.KEY
+
+st.set_page_config(page_title="Cine Graph", page_icon="🎬", layout="centered")
+
+# Título central
+st.markdown("<h1 style='text-align: center;'>🎬 Cine Graph</h1>", unsafe_allow_html=True)
+st.markdown("---")
+
+# Inicializa a lista de inputs na sessão
+if "num_campos" not in st.session_state:
+    st.session_state.num_campos = 1
+if "nomes_filmes" not in st.session_state:
+    st.session_state.nomes_filmes = [""]
+
+# Funções para adicionar e remover campos
+def add_input():
+    st.session_state.num_campos += 1
+    st.session_state.nomes_filmes.append("")
+
+def remove_input():
+    if st.session_state.num_campos > 1:
+        st.session_state.num_campos -= 1
+        st.session_state.nomes_filmes.pop()
+
+# Botões de controle
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.button("➕ Adicionar campo", on_click=add_input)
+with col2:
+    st.button("➖ Remover campo", on_click=remove_input)
+with col3:
+    pesquisar = st.button("🔍 Pesquisar")
+
+# Campos de input dinâmicos
+for i in range(st.session_state.num_campos):
+    st.session_state.nomes_filmes[i] = st.text_input(f"Filme {i+1}", value=st.session_state.nomes_filmes[i])
+
+# Quando clicar em "Pesquisar"
+if pesquisar:
+    pasta_destino = 'jsons_movies'
+    os.makedirs(pasta_destino, exist_ok=True)
+    st.success(f"Pasta '{pasta_destino}' verificada/criada.")
+
+    for nome_filme in st.session_state.nomes_filmes:
+        if not nome_filme.strip():
+            st.warning("Campo de filme vazio ignorado.")
+            continue
+
+        # Buscar ID do filme
+        search_url = f"https://api.themoviedb.org/3/search/movie?api_key={API_KEY}&query={nome_filme}"
+        search_resp = requests.get(search_url).json()
+
+        if not search_resp.get("results"):
+            st.error(f"❌ Filme '{nome_filme}' não encontrado.")
+            continue
+
+        id = search_resp["results"][0]["id"]
+
+        # Buscar detalhes e créditos
+        movie = requests.get(f"https://api.themoviedb.org/3/movie/{id}?api_key={API_KEY}").json()
+        credits = requests.get(f"https://api.themoviedb.org/3/movie/{id}/credits?api_key={API_KEY}").json()
+
+        diretores = [p['name'] for p in credits['crew'] if p['job'] == 'Director']
+        produtores = [p['name'] for p in credits['crew'] if p['job'] == 'Producer']
+        roteirista = [p['name'] for p in credits['crew'] if p['job'] == 'Writer']
+        atores = [a['name'] for a in credits['cast'][:100]]
+        colecao = movie['belongs_to_collection']['name'] if movie['belongs_to_collection'] else ''
+
+        movie_dict = {
+            "title": movie['title'],
+            "genres": movie['genres'],
+            "language": movie['original_language'],
+            "country": movie['origin_country'][0] if movie.get('origin_country') else '',
+            "director": diretores[0] if len(diretores) == 1 else diretores,
+            "producer": produtores[0] if len(produtores) == 1 else produtores,
+            "writer": roteirista[0] if len(roteirista) == 1 else roteirista,
+            "actors": atores,
+            "collection": colecao
+        }
+
+        caminho_arquivo = os.path.join(pasta_destino, f"{movie_dict['title']}.json")
+        try:
+            with open(caminho_arquivo, "w", encoding="utf-8") as f:
+                json.dump(movie_dict, f, indent=4, ensure_ascii=False)
+            st.success(f"✅ '{movie_dict['title']}' salvo em: {caminho_arquivo}")
+        except Exception as e:
+            st.error(f"Erro ao salvar {movie_dict['title']}: {e}")

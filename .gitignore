@@ -1,1 +1,4 @@
 apiKey.py
+.venv
+jsons_movies
+requestTmdb.py
