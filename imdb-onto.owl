@@ -1,0 +1,2185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/travel-ontology/imdb-ontology#"
+     xml:base="http://www.semanticweb.org/travel-ontology/imdb-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#FunctionalProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#foiProduzidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#foiProduzidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Empresa"/>
+        <rdfs:label xml:lang="pt">foi produzido por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#pertenceAColecao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#pertenceAColecao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao"/>
+        <rdfs:label xml:lang="pt">pertence à coleção</rdfs:label>
+        <owl:FunctionalProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:FunctionalProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temAtor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temAtor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+        <rdfs:label xml:lang="pt">tem ator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temDiretor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temDiretor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+        <rdfs:label xml:lang="pt">tem diretor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+        <rdfs:label xml:lang="pt">tem gênero</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temIdiomaOriginal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temIdiomaOriginal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma"/>
+        <rdfs:label xml:lang="pt">tem idioma original</rdfs:label>
+        <owl:FunctionalProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:FunctionalProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temPaisDeProducao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temPaisDeProducao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais"/>
+        <rdfs:label xml:lang="pt">tem país de produção</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#eAdulto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#eAdulto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="pt">é adulto</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temDataLancamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temDataLancamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="pt">tem data de lançamento</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temDuracao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temDuracao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="pt">tem duração (min)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temHomepage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temHomepage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="pt">tem homepage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temIDExterno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temIDExterno">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="pt">tem ID externo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temMediaVotos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temMediaVotos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label xml:lang="pt">tem média de votos</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temOrcamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temOrcamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+        <rdfs:label xml:lang="pt">tem orçamento</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temSinopse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temSinopse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="pt">tem sinopse</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#temTituloOriginal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#temTituloOriginal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="pt">tem título original</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pessoa"/>
+        <rdfs:label xml:lang="pt">Ator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao">
+        <rdfs:label xml:lang="pt">Coleção</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pessoa"/>
+        <rdfs:label xml:lang="pt">Diretor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Distribuidora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Distribuidora">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Empresa"/>
+        <rdfs:label xml:lang="pt">Distribuidora</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Empresa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Empresa">
+        <rdfs:label xml:lang="pt">Empresa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme">
+        <rdfs:label xml:lang="pt">Filme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero">
+        <rdfs:label xml:lang="pt">Gênero</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma">
+        <rdfs:label xml:lang="pt">Idioma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais">
+        <rdfs:label xml:lang="pt">País</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pessoa">
+        <rdfs:label xml:lang="pt">Pessoa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtora">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Empresa"/>
+        <rdfs:label xml:lang="pt">Produtora</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pessoa"/>
+        <rdfs:label xml:lang="pt">Roteirista</rdfs:label>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pessoa"/>
+        <rdfs:label xml:lang="pt">Produtor</rdfs:label>
+    </owl:Class>
+    
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#E.t.TheExtra-terrestrial">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+		<temGenero rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Fantasy"/>
+		<temAtor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#QuinnSmith"/>
+		<temDiretor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#StevenSpielberg"/>
+		<temProdutor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#StevenSpielberg"/>
+		<temPaisDeProducao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us"/>
+		<temIdiomaOriginal rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#En"/>
+		<rdfs:label xml:lang="pt">E.T. the Extra-Terrestrial</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Science Fiction</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Adventure">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Adventure</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Family">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Family</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Fantasy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Fantasy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#En">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma"/>
+		<rdfs:label xml:lang="pt">en</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais"/>
+		<rdfs:label xml:lang="pt">US</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#StevenSpielberg">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Steven Spielberg</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KathleenKennedy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor"/>
+		<rdfs:label xml:lang="pt">Kathleen Kennedy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#StevenSpielberg">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor"/>
+		<rdfs:label xml:lang="pt">Steven Spielberg</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HenryThomas">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Henry Thomas</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DrewBarrymore">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Drew Barrymore</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertMacnaughton">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert MacNaughton</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PeterCoyote">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Peter Coyote</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DeeWallace">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Dee Wallace</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ErikaEleniak">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Erika Eleniak</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#K.c.Martel">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">K.C. Martel</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#C.ThomasHowell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">C. Thomas Howell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SeanFrye">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Sean Frye</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidM.O'dell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David M. O'Dell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RichardSwingler">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Richard Swingler</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#FrankToth">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Frank Toth</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertBarton">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Barton</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MichaelDarrell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Michael Darrell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidBerkson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Berkson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidCarlberg">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Carlberg</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MiltKogan">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Milt Kogan</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AlexanderLampone">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Alexander Lampone</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RhodaMakoff">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rhoda Makoff</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertD.Murphy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert D. Murphy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RichardPesavento">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Richard Pesavento</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TomSherry">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tom Sherry</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SusanCameron">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Susan Cameron</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#WillFowler,Jr.">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Will Fowler, Jr.</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BarbaraHartnett">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Barbara Hartnett</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DianeLampone">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Diane Lampone</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MaryStein">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mary Stein</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MitchSuskin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mitch Suskin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TedGrossman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ted Grossman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JamesKahn">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">James Kahn</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnneLockhart">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anne Lockhart</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MelissaMathison">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Melissa Mathison</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DebraWinger">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Debra Winger</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MichaelLepre">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Michael Lepre</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AlexDaniels">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Alex Daniels</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChuckRiley">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Chuck Riley</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#QuinnSmith">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Quinn Smith</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao"/>
+		<rdfs:label xml:lang="pt"></rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KeanuReeves">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Keanu Reeves</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LaurenceFishburne">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Laurence Fishburne</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Carrie-anneMoss">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Carrie-Anne Moss</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HugoWeaving">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Hugo Weaving</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JadaPinkettSmith">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jada Pinkett Smith</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MaryAlice">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mary Alice</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HaroldPerrineau">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harold Perrineau</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#CollinChou">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Collin Chou</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HarryLennix">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harry Lennix</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#IanBliss">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ian Bliss</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LambertWilson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lambert Wilson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BruceSpence">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bruce Spence</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MonicaBellucci">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Monica Bellucci</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NonaGaye">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nona Gaye</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnthonyZerbe">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anthony Zerbe</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TanveerK.Atwal">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tanveer K. Atwal</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HelmutBakaitis">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Helmut Bakaitis</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KateBeahan">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kate Beahan</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#FrancineBell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Francine Bell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RachelBlackman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rachel Blackman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HenryBlasingame">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Henry Blasingame</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MattCastelli">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Matt Castelli</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#EssieDavis">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Essie Davis</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidBowers">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Bowers</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DionHorstmans">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Dion Horstmans</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LachyHulme">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lachy Hulme</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChristopherKirby">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Christopher Kirby</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PeterLamb">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Peter Lamb</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NathanielLees">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nathaniel Lees</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertMammone">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Mammone</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoeManning">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Joe Manning</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MauriceMorgan">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Maurice Morgan</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ThariniMudaliar">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tharini Mudaliar</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ReneNaufahu">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rene Naufahu</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobynNevin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robyn Nevin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GenevieveO'reilly">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Genevieve O'Reilly</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KittrickRedmond">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kittrick Redmond</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RupertReid">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rupert Reid</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KevinMichaelRichardson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kevin Michael Richardson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidRoberts">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Roberts</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RichardSydenham">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Richard Sydenham</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#CheTimmins">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Che Timmins</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GinaTorres">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Gina Torres</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ClaytonWatson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Clayton Watson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#CornelWest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Cornel West</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BernardWhite">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bernard White</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnthonyBrandonWong">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anthony Brandon Wong</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RoyJonesJr.">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Roy Jones Jr.</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixCollection">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao"/>
+		<rdfs:label xml:lang="pt">The Matrix Collection</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais"/>
+		<rdfs:label xml:lang="pt">US</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Lana Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Lilly Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Adventure">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Adventure</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Action">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Action</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Thriller">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Thriller</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Science Fiction</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#En">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma"/>
+		<rdfs:label xml:lang="pt">en</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoelSilver">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor"/>
+		<rdfs:label xml:lang="pt">Joel Silver</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixRevolutions">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+		<temGenero rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction"/>
+		<temAtor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#RoyJonesJr."/>
+		<pertenceAColecao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixCollection"/>
+		<temDiretor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski"/>
+		<temProdutor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoelSilver"/>
+		<temRoteirista rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski"/>
+		<temPaisDeProducao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us"/>
+		<temIdiomaOriginal rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#En"/>
+		<rdfs:label xml:lang="pt">The Matrix Revolutions</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista"/>
+		<rdfs:label xml:lang="pt">Lilly Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista"/>
+		<rdfs:label xml:lang="pt">Lana Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KeanuReeves">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Keanu Reeves</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LaurenceFishburne">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Laurence Fishburne</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Carrie-anneMoss">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Carrie-Anne Moss</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HugoWeaving">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Hugo Weaving</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JadaPinkettSmith">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jada Pinkett Smith</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GloriaFoster">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Gloria Foster</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HaroldPerrineau">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harold Perrineau</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MonicaBellucci">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Monica Bellucci</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HarryLennix">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harry Lennix</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LambertWilson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lambert Wilson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RandallDukKim">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Randall Duk Kim</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NonaGaye">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nona Gaye</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnthonyZerbe">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anthony Zerbe</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DanielBernhardt">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Daniel Bernhardt</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HelmutBakaitis">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Helmut Bakaitis</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidKilde">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Kilde</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MattMccolm">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Matt McColm</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#CollinChou">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Collin Chou</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NeilRayment">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Neil Rayment</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AdrianRayment">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Adrian Rayment</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DonBattee">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Don Battee</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ValerieBerry">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Valerie Berry</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SteveBastoni">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Steve Bastoni</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#IanBliss">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ian Bliss</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LilianaBogatko">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Liliana Bogatko</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MichaelBudd">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Michael Budd</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#StoneyBurke">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Stoney Burke</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KellyButler">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kelly Butler</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JosephineByrnes">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Josephine Byrnes</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NorisCampos">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Noris Campos</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PaulCotter">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Paul Cotter</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarleneCummins">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Marlene Cummins</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AttilaDavidhazy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Attila Davidhazy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MontañoRain">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Montaño Rain</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AustinGaluppo">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Austin Galuppo</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NicandroThomas">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nicandro Thomas</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#EssieDavis">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Essie Davis</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TerrellDixon">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Terrell Dixon</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NashEdgerton">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nash Edgerton</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidFranklin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Franklin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DarylHeath">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Daryl Heath</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RoyJonesJr.">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Roy Jones Jr.</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MalcolmKennard">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Malcolm Kennard</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChristopherKirby">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Christopher Kirby</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PeterLamb">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Peter Lamb</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NathanielLees">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nathaniel Lees</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TonyLynch">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tony Lynch</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertMammone">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Mammone</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AlimaAshton-sheibu">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Alima Ashton-Sheibu</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoshuaMbakwe">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Joshua Mbakwe</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChrisMitchell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Chris Mitchell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RayAnthony">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ray Anthony</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SteveMorris">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Steve Morris</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ToryMussett">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tory Mussett</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ReneNaufahu">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rene Naufahu</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobynNevin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robyn Nevin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidWillNo">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Will No</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GenevieveO'reilly">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Genevieve O'Reilly</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SocratisOtto">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Socratis Otto</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RupertReid">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rupert Reid</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#CornelWest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Cornel West</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidRoberts">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Roberts</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ShaneC.Rodrigo">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Shane C. Rodrigo</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NickScoggin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nick Scoggin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KevinScott">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kevin Scott</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TaheiSimpson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tahei Simpson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#FrankieStevens">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Frankie Stevens</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GinaTorres">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Gina Torres</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AndrewValli">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Andrew Valli</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AndyArness">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Andy Arness</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SteveVella">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Steve Vella</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ClaytonWatson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Clayton Watson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LeighWhannell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Leigh Whannell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BernardWhite">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bernard White</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnWalton">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">John Walton</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScottMclean">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Scott McLean</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnthonyBrandonWong">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anthony Brandon Wong</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChristineAnu">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Christine Anu</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TigerChenHu">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tiger Chen Hu</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarcusYoung">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Marcus Young</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidLeitch">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Leitch</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LachyHulme">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lachy Hulme</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixCollection">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao"/>
+		<rdfs:label xml:lang="pt">The Matrix Collection</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais"/>
+		<rdfs:label xml:lang="pt">US</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Lana Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Lilly Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Adventure">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Adventure</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Action">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Action</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Thriller">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Thriller</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Science Fiction</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#En">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma"/>
+		<rdfs:label xml:lang="pt">en</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoelSilver">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor"/>
+		<rdfs:label xml:lang="pt">Joel Silver</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixReloaded">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+		<temGenero rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction"/>
+		<temAtor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LachyHulme"/>
+		<pertenceAColecao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixCollection"/>
+		<temDiretor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski"/>
+		<temProdutor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoelSilver"/>
+		<temRoteirista rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski"/>
+		<temPaisDeProducao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us"/>
+		<temIdiomaOriginal rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#En"/>
+		<rdfs:label xml:lang="pt">The Matrix Reloaded</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista"/>
+		<rdfs:label xml:lang="pt">Lana Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista"/>
+		<rdfs:label xml:lang="pt">Lilly Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrix">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+		<temGenero rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction"/>
+		<temAtor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#NigelHarbach"/>
+		<pertenceAColecao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixCollection"/>
+		<temDiretor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski"/>
+		<temProdutor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoelSilver"/>
+		<temRoteirista rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski"/>
+		<temPaisDeProducao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us"/>
+		<temIdiomaOriginal rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#En"/>
+		<rdfs:label xml:lang="pt">The Matrix</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Action">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Action</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Science Fiction</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#En">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma"/>
+		<rdfs:label xml:lang="pt">en</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais"/>
+		<rdfs:label xml:lang="pt">US</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Lana Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Lilly Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoelSilver">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor"/>
+		<rdfs:label xml:lang="pt">Joel Silver</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LillyWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista"/>
+		<rdfs:label xml:lang="pt">Lilly Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LanaWachowski">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Roteirista"/>
+		<rdfs:label xml:lang="pt">Lana Wachowski</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KeanuReeves">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Keanu Reeves</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LaurenceFishburne">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Laurence Fishburne</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Carrie-anneMoss">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Carrie-Anne Moss</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HugoWeaving">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Hugo Weaving</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GloriaFoster">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Gloria Foster</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoePantoliano">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Joe Pantoliano</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarcusChong">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Marcus Chong</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JulianArahanga">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Julian Arahanga</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MattDoran">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Matt Doran</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BelindaMcclory">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Belinda McClory</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnthonyRayParker">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anthony Ray Parker</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PaulGoddard">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Paul Goddard</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertTaylor">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Taylor</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidAston">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Aston</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarcAdenGray">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Marc Aden Gray</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AdaNicodemou">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ada Nicodemou</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DeniGordon">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Deni Gordon</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RowanWitt">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rowan Witt</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#EleanorWitt">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Eleanor Witt</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TamaraBrown">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tamara Brown</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JanayaPender">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Janaya Pender</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AdrynWhite">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Adryn White</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NatalieTjen">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Natalie Tjen</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BillYoung">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bill Young</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidO'connor">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David O'Connor</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JeremyBall">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jeremy Ball</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#FionaJohnson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Fiona Johnson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HarryLawrence">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harry Lawrence</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SteveDodd">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Steve Dodd</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LukeQuinton">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Luke Quinton</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LawrenceWoodward">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lawrence Woodward</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MichaelButcher">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Michael Butcher</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BernardLedger">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bernard Ledger</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChrisPattinson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Chris Pattinson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertSimper">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Simper</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NigelHarbach">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nigel Harbach</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TheMatrixCollection">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao"/>
+		<rdfs:label xml:lang="pt">The Matrix Collection</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#IndependenceDay">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Filme"/>
+		<temGenero rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction"/>
+		<temAtor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#BarryNolan"/>
+		<pertenceAColecao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#IndependenceDayCollection"/>
+		<temDiretor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#RolandEmmerich"/>
+		<temProdutor rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#DeanDevlin"/>
+		<temPaisDeProducao rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us"/>
+		<temIdiomaOriginal rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#En"/>
+		<rdfs:label xml:lang="pt">Independence Day</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Action">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Action</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Adventure">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Adventure</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ScienceFiction">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Genero"/>
+		<rdfs:label xml:lang="pt">Science Fiction</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#En">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Idioma"/>
+		<rdfs:label xml:lang="pt">en</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#Us">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Pais"/>
+		<rdfs:label xml:lang="pt">US</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RolandEmmerich">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Diretor"/>
+		<rdfs:label xml:lang="pt">Roland Emmerich</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DeanDevlin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Produtor"/>
+		<rdfs:label xml:lang="pt">Dean Devlin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#WillSmith">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Will Smith</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BillPullman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bill Pullman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JeffGoldblum">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jeff Goldblum</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MaryMcdonnell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mary McDonnell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JuddHirsch">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Judd Hirsch</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertLoggia">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Loggia</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RandyQuaid">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Randy Quaid</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MargaretColin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Margaret Colin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JamesRebhorn">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">James Rebhorn</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HarveyFierstein">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harvey Fierstein</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AdamBaldwin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Adam Baldwin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BrentSpiner">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Brent Spiner</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JamesDuval">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">James Duval</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#VivicaA.Fox">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Vivica A. Fox</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LisaJakub">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lisa Jakub</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RossBagley">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ross Bagley</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MaeWhitman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mae Whitman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BillSmitrovich">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bill Smitrovich</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KierstenWarren">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kiersten Warren</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#HarryConnickJr.">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Harry Connick Jr.</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GiuseppeAndrews">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Giuseppe Andrews</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnStorey">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">John Storey</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#FrankNovak">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Frank Novak</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DevonGummersall">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Devon Gummersall</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LelandOrser">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Leland Orser</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MirronE.Willis">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mirron E. Willis</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RossLacy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ross Lacy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidPressman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Pressman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#VivianPalermo">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Vivian Palermo</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RaphaelSbarge">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Raphael Sbarge</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BobbyHosea">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Bobby Hosea</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DanLauria">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Dan Lauria</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SteveGiannelli">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Steve Giannelli</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#EricPaskel">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Eric Paskel</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#CarlosLacámara">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Carlos Lacámara</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnBennettPerry">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">John Bennett Perry</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TroyWillis">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Troy Willis</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#TimKelleher">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Tim Kelleher</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#WayneWilderson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Wayne Wilderson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JayAcovone">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jay Acovone</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JamesWong">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">James Wong</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ThomBarry">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Thom Barry</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JanaMarieHupp">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jana Marie Hupp</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MattPashkow">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Matt Pashkow</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RobertPine">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Robert Pine</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarisaJohnston">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Marisa Johnston</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MichaelWinther">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Michael Winther</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#WarrenDexterBeatty">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Warren Dexter Beatty</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PaulLeclair">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Paul LeClair</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MichaelVacca">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Michael Vacca</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DavidChannell">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">David Channell</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnCapodice">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">John Capodice</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GregCollins">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Greg Collins</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#DerekWebster">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Derek Webster</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarkFite">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mark Fite</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#EricNealNewman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Eric Neal Newman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LevanUchaneishvili">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Levan Uchaneishvili</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KristofKonrad">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kristof Konrad</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KevinSifuentes">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kevin Sifuentes</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ElstonRidgle">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Elston Ridgle</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RandyOglesby">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Randy Oglesby</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JackMoore">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jack Moore</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BarryDelSherman">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Barry Del Sherman</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#LymanWard">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Lyman Ward</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AnthonyCrivello">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Anthony Crivello</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RichardSpeightJr.">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Richard Speight Jr.</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BarbaraBeck">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Barbara Beck</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JoeFowler">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Joe Fowler</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AndrewWarner">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Andrew Warner</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SharonTay">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Sharon Tay</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#PeterJ.Lucas">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Peter J. Lucas</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#YelenaDanova">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Yelena Danova</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnnyKim">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Johnny Kim</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#VanessaJ.Wells">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Vanessa J. Wells</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JessikaCardinahl">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jessika Cardinahl</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#GaryW.Cruz">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Gary W. Cruz</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RonPitts">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ron Pitts</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#WendyL.Walsh">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Wendy L. Walsh</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ChristineDevine">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Christine Devine</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MarkThompson">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Mark Thompson</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ErnieAnastos">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Ernie Anastos</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KevinCooney">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kevin Cooney</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#RanceHoward">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Rance Howard</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#NelsonMashita">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Nelson Mashita</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JeffPhillips">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jeff Phillips</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#SayedBadreya">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Sayed Badreya</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AdamTomei">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Adam Tomei</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnBradley">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">John Bradley</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#KimberlyBeck">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Kimberly Beck</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#ThomasF.Duffy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Thomas F. Duffy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#AndrewKeegan">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Andrew Keegan</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JonMatthews">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jon Matthews</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JimPiddock">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jim Piddock</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#FredericW.Barnes">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Frederic W. Barnes</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#EleanorClift">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Eleanor Clift</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JerryDunphy">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jerry Dunphy</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JackGermond">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Jack Germond</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#MortonKondracke">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Morton Kondracke</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#JohnMclaughlin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">John McLaughlin</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#BarryNolan">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Ator"/>
+		<rdfs:label xml:lang="pt">Barry Nolan</rdfs:label>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/travel-ontology/imdb-ontology#IndependenceDayCollection">
+		<rdf:type rdf:resource="http://www.semanticweb.org/travel-ontology/imdb-ontology#Colecao"/>
+		<rdfs:label xml:lang="pt">Independence Day Collection</rdfs:label>
+	</owl:NamedIndividual>
+
+</rdf:RDF>
