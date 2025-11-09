@@ -1,7 +1,7 @@
 apiKey.py
 .venv
 jsons_movies
-requestTmdb.py
+# requestTmdb.py
 teste.*
 at1_ontologia.owl
 __pycache__
