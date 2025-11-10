@@ -1,3 +1,5 @@
+import re
+
 class Entity():
     url = 'http://www.semanticweb.org/travel-ontology/imdb-ontology'
     ent_type = None
@@ -9,7 +11,7 @@ class Entity():
     def _toURL(self, in_str:str):
         if(in_str[:7] != 'http://'):
             in_str = ''.join([x.capitalize() for x in in_str.split()])
-            return self.url + '#' + in_str
+            return self.url + '#' + re.sub(r'[^a-zA-Z ]', '', in_str)
         return in_str
 
     def __str__(self):
@@ -85,15 +87,37 @@ class Individual(Entity):
     def __init__(self, label):
         super().__init__(label)
 
+    def __str__(self):
+        out_str = f'\t<owl:{self.ent_type} rdf:about="{self.url_label}">'
+
+
+        for key, value_list in self.relations.items():
+            for value in value_list:
+                out_str = out_str + f'\n\t\t<{key} rdf:{value["rdf"]}="{value["item"]}"'
+                if(value['rdf'] == 'resource'):
+                    out_str = out_str + '/>'
+                elif(value['rdf'] == 'datatype'):
+                    out_str = out_str + f'>{value["data_value"]}</{key}>'
+
+        out_str = out_str + f'\n\t\t<rdfs:label xml:lang="pt">{self.label}</rdfs:label>\n\t</owl:{self.ent_type}>\n'
+
+        return out_str
+
     def setClass(self, class_name):
-        self.relations['rdf:type'] = {'rdf': 'resource', 
-                                      'item':self._toURL(class_name)}
+        self.relations['rdf:type'] = [{'rdf': 'resource','item':self._toURL(class_name)}]
 
     def setObjProperty(self, obj_property, value):
-        self.relations[obj_property] = {'rdf': 'resource',
-                                        'item': self._toURL(value)}
+        if(obj_property not in self.relations.keys()):
+            self.relations[obj_property] = [{'rdf': 'resource', 'item': self._toURL(value)}]
+        else:
+            self.relations[obj_property].append({'rdf': 'resource', 'item': self._toURL(value)})
 
     def setDataProperty(self, data_property:DataProperty, value):
-        self.relations[data_property.label] = {'rdf': 'datatype', 
-                                               'item': data_property.relations['rdfs:range']['item'],
-                                               'data_value': value}
+        if(data_property.label not in self.relations.keys()):
+            self.relations[data_property.label] = [{'rdf': 'datatype', 
+                                                   'item': data_property.relations['rdfs:range']['item'],
+                                                   'data_value': value}]
+        else:
+            self.relations[data_property.label].append({'rdf': 'datatype', 
+                                                   'item': data_property.relations['rdfs:range']['item'],
+                                                   'data_value': value})

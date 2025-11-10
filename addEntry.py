@@ -18,7 +18,7 @@ CONVERT_DICT = {'genres': 'Genero',
                 }
 
 JSON_PATHS = glob.glob('jsons_movies/*.json')#['jsons_movies/The Matrix.json']
-ONTO_PATH = 'imdb-onto.owl'
+ONTO_PATH = 'cinegraph_att.owl'
 ONTO_URL = 'http://www.semanticweb.org/travel-ontology/imdb-ontology'
 
 
@@ -42,6 +42,10 @@ else:
 read_file = read_file.split('\n') 
 file_tail = read_file.pop()
 
+# Teste para mudanças futuras
+temNome = DataProperty('temNome')
+temNome.setDomain('Filme')
+temNome.setRange('string')
 
 for json_entry in JSON_PATHS:
     with open(json_entry, 'r') as file:
@@ -53,6 +57,9 @@ for json_entry in JSON_PATHS:
                 if(isinstance(indiv, str)):
                     new_entry = Individual(indiv)
                     new_entry.setClass(CONVERT_DICT[key])
+                    if(key in ['actors', 'writer', 'producer', 'director']):
+                        new_entry.setDataProperty(temNome, indiv)
+                        
                 elif(isinstance(indiv, dict)):
                     name = indiv['name']
                     new_entry = Individual(name)
