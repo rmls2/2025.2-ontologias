@@ -3,8 +3,12 @@ import requests
 import json
 import os
 import apiKey
+import glob
+from addEntry import OWLFile
 
 API_KEY = apiKey.KEY
+BASE_FILE = 'base.owl'
+OUTPUT_FILE = 'cinegraph_att.owl'
 
 st.set_page_config(page_title="Cine Graph", page_icon="🎬", layout="centered")
 
@@ -40,6 +44,15 @@ with col3:
 # Campos de input dinâmicos
 for i in range(st.session_state.num_campos):
     st.session_state.nomes_filmes[i] = st.text_input(f"Filme {i+1}", value=st.session_state.nomes_filmes[i])
+
+# Função para escrever o arquivo json
+def write_json(file_path:str, mdict:dict):
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(mdict, f, indent=4, ensure_ascii=False)
+        st.success(f"✅ '{mdict['title']}' salvo em: {file_path}")
+    except Exception as e:
+        st.error(f"Erro ao salvar {mdict['title']}: {e}")
 
 # Quando clicar em "Pesquisar"
 if pesquisar:
@@ -85,9 +98,30 @@ if pesquisar:
         }
 
         caminho_arquivo = os.path.join(pasta_destino, f"{movie_dict['title']}.json")
-        try:
-            with open(caminho_arquivo, "w", encoding="utf-8") as f:
-                json.dump(movie_dict, f, indent=4, ensure_ascii=False)
-            st.success(f"✅ '{movie_dict['title']}' salvo em: {caminho_arquivo}")
-        except Exception as e:
-            st.error(f"Erro ao salvar {movie_dict['title']}: {e}")
+        # Verificando se os dados recebidos já existem na lista de JSONs
+        JSON_PATHS = glob.glob('jsons_movies/*.json')
+        if(caminho_arquivo in JSON_PATHS):
+            with open(caminho_arquivo, "r", encoding="utf-8") as f:
+                movie_dict_old = json.load(f)
+            if(movie_dict_old!=movie_dict):
+                # Escrevendo os dados recebidos em JSON
+                write_json(caminho_arquivo, movie_dict)
+
+                # Re-escrevendo o arquivo OWL
+                # (Sim, ele escreve do zero. Se eu tiver que arranjar um jeito 
+                # de adicionar instâncias dinamicamente, eu tranco o curso)
+                cinegraph_file = OWLFile(BASE_FILE)
+
+                for json_entry in JSON_PATHS:
+                    with open(json_entry, 'r') as file:
+                        new_info = json.load(file)
+                        cinegraph_file.addEntry(new_info)
+        
+                cinegraph_file.write(OUTPUT_FILE)
+        else:
+            write_json(caminho_arquivo, movie_dict)
+            
+            # Nesse aqui eu só adiciono o filme novo mesmo
+            cinegraph_file = OWLFile(OUTPUT_FILE)
+            cinegraph_file.addEntry(movie_dict)
+            cinegraph_file.write(OUTPUT_FILE)            

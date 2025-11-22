@@ -6,7 +6,7 @@ import os
 CONVERT_DICT = {'genres': 'Genero',
                 'language': 'Idioma',
                 'country': 'Pais',
-                'colection': 'Colecao',
+                'collection': 'Colecao',
                 'actors': 'Ator',
                 'writer': 'Roteirista',
                 'producer': 'Produtor',
@@ -42,7 +42,7 @@ class OWLFile:
         self.temNome = DataProperty('temNome')
         self.temNome.setDomain('Filme')
         self.temNome.setRange('string')
-        self.read_file.append(str(self.temNome))
+        #self.read_file.append(str(self.temNome))
 
     def addEntry(self, new_info):
         for key, value in new_info.items():
@@ -75,8 +75,8 @@ class OWLFile:
                         for a in new_info['actors']:
                             new_entry.setObjProperty('temAtor', a)
 
-                        if(new_info['colection']!=""):
-                            new_entry.setObjProperty('pertenceAColecao', new_info['colection'])
+                        if(new_info['collection']!=""):
+                            new_entry.setObjProperty('pertenceAColecao', new_info['collection'])
 
                         for json_key, obj_prop in zip(['director','producer','writer','country','language'], ['temDiretor','temProdutor','temRoteirista','temPaisDeProducao','temIdiomaOriginal']):
                             if(isinstance(new_info[json_key], str) and len(new_info[json_key])>0):
