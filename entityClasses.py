@@ -1,7 +1,8 @@
 import re
 
+ONTO_URL = 'http://www.semanticweb.org/ontology/cinegraph_att'
+
 class Entity():
-    url = 'http://www.semanticweb.org/travel-ontology/imdb-ontology'
     ent_type = None
     def __init__(self, label):
         self.label = label
@@ -10,8 +11,10 @@ class Entity():
 
     def _toURL(self, in_str:str):
         if(in_str[:7] != 'http://'):
-            in_str = ''.join([x.capitalize() for x in in_str.split()])
-            return self.url + '#' + re.sub(r'[^a-zA-Z ]', '', in_str)
+            if(in_str.find(' ')!=-1):
+                in_str = in_str.split()
+                in_str = in_str[0].lower() + ''.join([x.capitalize() for x in in_str[1:]])
+            return ONTO_URL + '#' + re.sub(r'[^a-zA-Z ]', '', in_str)
         return in_str
 
     def __str__(self):
@@ -36,6 +39,13 @@ class Entity():
 
 class Classes(Entity):
     ent_type = 'Class'
+    
+    def _toURL(self, in_str:str):
+        if(in_str[:7] != 'http://'):
+            in_str = ''.join([x.capitalize() for x in in_str.split()])
+            return ONTO_URL + '#' + re.sub(r'[^a-zA-Z ]', '', in_str)
+        return in_str
+
     def __init__(self, name):
         super().__init__(name)
 
@@ -84,6 +94,13 @@ class DataProperty(Entity):
 
 class Individual(Entity):
     ent_type = 'NamedIndividual'
+
+    def _toURL(self, in_str:str):
+        if(in_str[:7] != 'http://'):
+            in_str = ''.join([x.capitalize() for x in in_str.split()])
+            return ONTO_URL + '#' + re.sub(r'[^a-zA-Z ]', '', in_str)
+        return in_str
+    
     def __init__(self, label):
         super().__init__(label)
 
