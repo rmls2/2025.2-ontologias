@@ -125,3 +125,14 @@ if pesquisar:
             cinegraph_file = OWLFile(OUTPUT_FILE)
             cinegraph_file.addEntry(movie_dict)
             cinegraph_file.write(OUTPUT_FILE)            
+
+# Botão de download do arquivo OWL
+st.markdown("---")
+if os.path.exists(OUTPUT_FILE):
+    with open(OUTPUT_FILE, "rb") as file:
+        st.download_button(
+            label="⬇️ Download do arquivo OWL",
+            data=file,
+            file_name=OUTPUT_FILE,
+            mime="application/rdf+xml"
+        )
